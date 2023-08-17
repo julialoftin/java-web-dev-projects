@@ -8,6 +8,7 @@ public class Area {
         double radius = input.nextDouble();
 
         System.out.println("The radius of the circle is: " + Circle.getArea(radius));
+        input.close();
     }
 
 }
