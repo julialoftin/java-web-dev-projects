@@ -17,5 +17,8 @@ public class Main {
         popUp.setItems(items);
 
         System.out.println(popUp);
+        popUp.removeItem(burger);
+        System.out.println(popUp);
+
     }
 }
