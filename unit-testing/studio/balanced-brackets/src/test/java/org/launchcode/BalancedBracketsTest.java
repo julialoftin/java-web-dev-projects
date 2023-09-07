@@ -7,7 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class BalancedBracketsTest {
     //TODO: add tests here
 
-    //TRUE tests:
     @Test
     public void onlyBracketsReturnsTrue() {
         assertTrue(BalancedBrackets.hasBalancedBrackets("[]"));
@@ -28,7 +27,6 @@ class BalancedBracketsTest {
     public void testEmptyString() {
         assertTrue(BalancedBrackets.hasBalancedBrackets(""));
     }
-    // FALSE tests:
     @Test
     public void testNoClosingBracket() {
         assertFalse(BalancedBrackets.hasBalancedBrackets("[LaunchCode"));
@@ -44,5 +42,13 @@ class BalancedBracketsTest {
     @Test
     public void testBackwardBracketsOnly() {
         assertFalse(BalancedBrackets.hasBalancedBrackets("]["));
+    }
+    @Test
+    public void testMultiplePairedBrackets() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[][][]"));
+    }
+    @Test
+    public void testMultipleUnPairedBrackets() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("][][]["));
     }
 }
